@@ -1,0 +1,95 @@
+<div class="flex-1 w-full">
+  <.navbar_other class="w-full" />
+
+  <section class="relative overflow-hidden bg-ink py-20 sm:py-24">
+    <div class="absolute inset-0">
+      <img
+        src={~p"/images/environmental-photography.jpg"}
+        alt=""
+        class="h-full w-full object-cover opacity-30"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/45"></div>
+    </div>
+    <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <p class="text-sm font-bold uppercase tracking-[0.18em] text-brand">Servicios</p>
+      <h1 class="mt-3 max-w-3xl text-4xl font-black tracking-normal text-white sm:text-5xl">
+        Soluciones técnicas ambientales de punta a punta
+      </h1>
+      <p class="mt-5 max-w-2xl text-lg leading-8 text-sand">
+        Acompañamos cada etapa del proyecto: evaluación, permisos, obra,
+        operación, sistemas de gestión y vínculo comunitario.
+      </p>
+    </div>
+  </section>
+
+  <.service_page_section
+    id="evaluacion-planificacion"
+    eyebrow="Evaluación"
+    title="Evaluación y Planificación Ambiental"
+    description="Identificamos, evaluamos y gestionamos impactos ambientales antes de la ejecución para asegurar cumplimiento normativo y viabilidad."
+    icon="hero-document-magnifying-glass"
+    tone="brand"
+    surface="white"
+    image="/images/evaluacion.jpeg"
+    items={[
+      "Estudios de Impacto Ambiental (EIA)",
+      "Estudios de Tránsito",
+      "Estudios de Ruidos",
+      "Análisis de viabilidad socioambiental"
+    ]}
+  />
+
+  <.service_page_section
+    id="gestion-cumplimiento"
+    eyebrow="Cumplimiento"
+    title="Gestión y Cumplimiento en Obras y Operaciones"
+    description="Acompañamos la ejecución de obras y operaciones para minimizar riesgos, ordenar obligaciones ambientales y sostener la trazabilidad."
+    icon="hero-shield-check"
+    tone="earth"
+    surface="muted"
+    reverse
+    image="/images/gestion.jpeg"
+    items={[
+      "Responsabilidad Ambiental",
+      "Planes de Gestión Ambiental (PGA)",
+      "Gestión de Residuos",
+      "Permisos Ambientales"
+    ]}
+  />
+
+  <.service_page_section
+    id="sostenibilidad"
+    eyebrow="Sostenibilidad"
+    title="Sostenibilidad, Cambio Climático y Sistemas de Gestión"
+    description="Ayudamos a medir, reducir y comunicar la huella ambiental, desarrollar estrategias de sostenibilidad e implementar sistemas reconocidos."
+    icon="hero-arrow-trending-up"
+    tone="sun"
+    surface="white"
+    image="/images/iso-14001.png"
+    items={[
+      "Estimación de Gases de Efecto Invernadero (GEI)",
+      "Estrategias de Sostenibilidad y Economía Circular",
+      "Implementación de Sistemas de Gestión Ambiental ISO 14001"
+    ]}
+  />
+
+  <.service_page_section
+    id="gestion-social"
+    eyebrow="Territorio"
+    title="Gestión Social y Formación"
+    description="Facilitamos participación comunitaria, formación de equipos y diálogo entre proyectos, industrias y comunidades locales."
+    icon="hero-users"
+    tone="slate"
+    surface="muted"
+    reverse
+    image="/images/formacion.jpeg"
+    items={[
+      "Capacitaciones Ambientales",
+      "Talleres con la Comunidad",
+      "Sondeos de Opinión",
+      "Acompañamiento territorial"
+    ]}
+  />
+
+  <.footer class="w-full" />
+</div>

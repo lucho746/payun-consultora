@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es" class="[scrollbar-gutter:stable]">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#FBF8F1" />
+    <link rel="icon" type="image/svg+xml" href={~p"/images/favicon.svg"} />
+    <meta name="csrf-token" content={get_csrf_token()} />
+    <.live_title suffix=" · Payún">
+      {assigns[:page_title] || "Consultora Ambiental"}
+    </.live_title>
+    <meta name="description" content={@seo_description} />
+    <link rel="canonical" href={@canonical_url} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Payún Consultora Ambiental" />
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:title" content={@page_title <> " · Payún"} />
+    <meta property="og:description" content={@seo_description} />
+    <meta property="og:url" content={@canonical_url} />
+    <meta property="og:image" content={@social_image} />
+    <meta property="og:image:alt" content="Payún Consultora Ambiental" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={@page_title <> " · Payún"} />
+    <meta name="twitter:description" content={@seo_description} />
+    <meta name="twitter:image" content={@social_image} />
+    <link phx-track-static rel="stylesheet" href={~p"/assets/app.css"} />
+    <script defer phx-track-static type="text/javascript" src={~p"/assets/app.js"}>
+    </script>
+  </head>
+  <body class="min-h-screen bg-paper">
+    <div class="flex flex-col min-h-screen w-full pb-24">
+      {@inner_content}
+    </div>
+    <a
+      id="floating-whatsapp"
+      href="https://wa.me/5492615135614"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Contactar por WhatsApp (abre en una nueva pestaña)"
+      class="fixed bottom-[calc(1rem+env(safe-area-inset-bottom))] right-[calc(1rem+env(safe-area-inset-right))] z-40 inline-flex h-14 min-w-14 items-center justify-center gap-3 rounded-full bg-[#075E54] px-4 text-white shadow-xl ring-1 ring-white/20 transition hover:bg-[#064c44] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#075E54] sm:px-5"
+    >
+      <i class="fa-brands fa-whatsapp text-3xl" aria-hidden="true"></i>
+      <span class="hidden text-sm font-bold sm:inline">Escribinos</span>
+    </a>
+  </body>
+</html>

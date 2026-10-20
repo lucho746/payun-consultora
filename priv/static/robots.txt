@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://payunconsultora.com.ar/sitemap.xml

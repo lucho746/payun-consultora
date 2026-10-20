@@ -1,0 +1,164 @@
+<div class="flex-1 w-full">
+  <.navbar_other class="w-full" />
+
+  <section class="bg-paper py-20 sm:py-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl">
+        <div>
+          <p class="text-sm font-bold uppercase tracking-[0.18em] text-brand">Equipo</p>
+          <h1 class="mt-3 text-4xl font-black tracking-normal text-ink sm:text-5xl">
+            Especialistas con experiencia técnica y territorial
+          </h1>
+        </div>
+        <p class="mt-5 max-w-3xl text-lg leading-8 text-earth/70">
+          Socias fundadoras con trayectoria en consultoría ambiental, obras,
+          sostenibilidad, sistemas de gestión y acompañamiento ante organismos públicos.
+        </p>
+      </div>
+
+      <div class="mt-14 grid gap-6 lg:grid-cols-2">
+        <article class="overflow-hidden rounded-lg border border-sand bg-paper shadow-sm">
+          <div class="grid gap-0 md:grid-cols-[220px_1fr]">
+            <div class="bg-earth-soft p-6">
+              <div class="mx-auto h-64 w-full max-w-[180px] overflow-hidden rounded-lg bg-paper shadow-lg">
+                <img
+                  src={~p"/images/caro.png"}
+                  alt="M.Sc. María Carolina Ozollo"
+                  class="h-full w-full object-cover"
+                />
+              </div>
+            </div>
+
+            <div class="p-6 sm:p-8">
+              <p class="text-sm font-bold uppercase tracking-[0.18em] text-brand">
+                Socia fundadora
+              </p>
+              <h2 class="mt-2 text-2xl font-black text-ink">M.Sc. María Carolina Ozollo</h2>
+
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="rounded-full bg-brand-soft px-3 py-1 text-xs font-bold text-brand-dark">
+                  Sostenibilidad Aplicada
+                </span>
+                <span class="rounded-full bg-sand px-3 py-1 text-xs font-bold text-earth/80">
+                  Gestión Ambiental
+                </span>
+                <span class="rounded-full bg-sun-soft px-3 py-1 text-xs font-bold text-sun-ink">
+                  Residuos
+                </span>
+              </div>
+
+              <p class="mt-5 text-sm leading-7 text-earth/70">
+                Magíster en Sostenibilidad Aplicada y Licenciada en Gestión Ambiental.
+                Cuenta con más de diez años de experiencia en consultoría ambiental,
+                gestión de residuos, sostenibilidad corporativa y representación técnica
+                ante organismos públicos.
+              </p>
+
+              <div
+                :if={@expanded_member == "caro"}
+                class="mt-5 border-t border-sand pt-5 text-sm leading-7 text-earth/70"
+              >
+                <p>
+                  Ha liderado estudios ambientales de alto, medio y bajo impacto,
+                  planes de manejo ambiental y gestión integral de residuos para
+                  proyectos de infraestructura, minería, energía y obras civiles
+                  financiadas por organismos multilaterales.
+                </p>
+                <p class="mt-3">
+                  Posee experiencia internacional en cálculo de huella de carbono
+                  y reportes de sostenibilidad, además de trayectoria académica y
+                  en investigación.
+                </p>
+              </div>
+
+              <button
+                type="button"
+                phx-click="toggle_bio"
+                phx-value-member="caro"
+                class="mt-6 inline-flex items-center gap-2 text-sm font-bold text-brand transition hover:text-brand-dark"
+              >
+                <%= if @expanded_member == "caro" do %>
+                  Leer menos <.icon name="hero-chevron-up-mini" class="h-4 w-4" />
+                <% else %>
+                  Ver trayectoria <.icon name="hero-chevron-down-mini" class="h-4 w-4" />
+                <% end %>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="overflow-hidden rounded-lg border border-sand bg-paper shadow-sm">
+          <div class="grid gap-0 md:grid-cols-[220px_1fr]">
+            <div class="bg-brand-soft p-6">
+              <div class="mx-auto h-64 w-full max-w-[180px] overflow-hidden rounded-lg bg-paper shadow-lg">
+                <img
+                  src={~p"/images/eva.jpg"}
+                  alt="Lic. Evangelina Tapia"
+                  class="h-full w-full object-cover"
+                />
+              </div>
+            </div>
+
+            <div class="p-6 sm:p-8">
+              <p class="text-sm font-bold uppercase tracking-[0.18em] text-brand">
+                Socia fundadora
+              </p>
+              <h2 class="mt-2 text-2xl font-black text-ink">Lic. Evangelina Tapia</h2>
+
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="rounded-full bg-earth-soft px-3 py-1 text-xs font-bold text-earth">
+                  ISO 14001
+                </span>
+                <span class="rounded-full bg-brand-soft px-3 py-1 text-xs font-bold text-brand-dark">
+                  Economía Circular
+                </span>
+                <span class="rounded-full bg-sand px-3 py-1 text-xs font-bold text-earth/80">
+                  Obras
+                </span>
+              </div>
+
+              <p class="mt-5 text-sm leading-7 text-earth/70">
+                Licenciada en Gestión Ambiental, con amplia experiencia en supervisión
+                ambiental de proyectos de infraestructura, implementación de sistemas
+                de gestión ambiental ISO 14001 y docencia universitaria.
+              </p>
+
+              <div
+                :if={@expanded_member == "eva"}
+                class="mt-5 border-t border-sand pt-5 text-sm leading-7 text-earth/70"
+              >
+                <p>
+                  Diplomada en Calidad, Ambiente, Seguridad y Salud Ocupacional y en
+                  Economía Circular. Se desempeña como responsable ambiental de obras
+                  públicas y privadas, con experiencia en proyectos viales, hidráulicos
+                  y de saneamiento.
+                </p>
+                <p class="mt-3">
+                  Ha trabajado en planes de gestión ambiental y social, permisos,
+                  estimación de emisiones de GEI y acompañamiento comunitario.
+                  También se desempeña como docente universitaria en Evaluación de
+                  Impacto Ambiental.
+                </p>
+              </div>
+
+              <button
+                type="button"
+                phx-click="toggle_bio"
+                phx-value-member="eva"
+                class="mt-6 inline-flex items-center gap-2 text-sm font-bold text-brand transition hover:text-brand-dark"
+              >
+                <%= if @expanded_member == "eva" do %>
+                  Leer menos <.icon name="hero-chevron-up-mini" class="h-4 w-4" />
+                <% else %>
+                  Ver trayectoria <.icon name="hero-chevron-down-mini" class="h-4 w-4" />
+                <% end %>
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <.footer class="w-full" />
+</div>

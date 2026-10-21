@@ -9,7 +9,7 @@ defmodule ConsultoraWeb.Components.Layout do
   def navbar_home(assigns) do
     assigns =
       assign(assigns, :links, [
-        %{href: "#nosotros", label: "Nosotros"},
+        %{href: "#nosotros", label: "Nosotras"},
         %{href: "#servicios", label: "Servicios"},
         %{href: "#sectores", label: "Sectores"}
       ])
@@ -116,7 +116,6 @@ defmodule ConsultoraWeb.Components.Layout do
               </span>
               <div>
                 <h3 class="text-xl font-extrabold">Payún Consultora Ambiental</h3>
-                <p class="text-sm text-sand">Gestión ambiental con criterio estratégico.</p>
               </div>
             </div>
             <p class="mt-6 max-w-xl text-sm leading-6 text-sand">
@@ -124,8 +123,8 @@ defmodule ConsultoraWeb.Components.Layout do
               cumplimiento normativo y mirada territorial.
             </p>
           </div>
-          
-    <!-- Middle content -->
+
+          <!-- Middle content -->
           <div>
             <h4 class="mb-4 text-sm font-bold uppercase tracking-[0.18em] text-sand/70">Sitio</h4>
             <ul class="space-y-3 text-sm">
@@ -141,6 +140,26 @@ defmodule ConsultoraWeb.Components.Layout do
               Contacto
             </h4>
             <div class="flex flex-wrap gap-3">
+              <a
+                href="https://www.instagram.com/payun.consultora/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-sand transition hover:border-brand/60 hover:bg-brand hover:text-white"
+              >
+                <span class="sr-only">Instagram</span>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  class="h-5 w-5"
+                  aria-hidden="true"
+                >
+                  <rect x="3" y="3" width="18" height="18" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                </svg>
+              </a>
               <a
                 href="https://www.linkedin.com/in/payunconsultora/"
                 target="_blank"

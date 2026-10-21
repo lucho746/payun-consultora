@@ -48,8 +48,8 @@ defmodule ConsultoraWeb.IndexLiveTest do
     {:ok, _view, html} = live(conn, ~p"/")
 
     assert html =~ "PAYÚN"
-    assert html =~ "Soluciones ambientales para cada etapa del proyecto"
-    assert html =~ "Confían en nuestro criterio técnico"
+    assert html =~ "Acompañamiento para todas las etapas del proyecto"
+    assert html =~ "Trayectoria y experiencia"
     assert html =~ "Hablemos de tu proyecto"
   end
 

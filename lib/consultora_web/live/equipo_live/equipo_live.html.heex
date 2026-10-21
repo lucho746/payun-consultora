@@ -18,7 +18,7 @@
 
       <div class="mt-14 grid gap-6 lg:grid-cols-2">
         <article class="overflow-hidden rounded-lg border border-sand bg-paper shadow-sm">
-          <div class="grid gap-0 md:grid-cols-[220px_1fr]">
+          <div class="grid h-full gap-0 md:grid-cols-[220px_1fr]">
             <div class="bg-earth-soft p-6">
               <div class="mx-auto h-64 w-full max-w-[180px] overflow-hidden rounded-lg bg-paper shadow-lg">
                 <img
@@ -34,18 +34,6 @@
                 Socia fundadora
               </p>
               <h2 class="mt-2 text-2xl font-black text-ink">M.Sc. María Carolina Ozollo</h2>
-
-              <div class="mt-4 flex flex-wrap gap-2">
-                <span class="rounded-full bg-brand-soft px-3 py-1 text-xs font-bold text-brand-dark">
-                  Sostenibilidad Aplicada
-                </span>
-                <span class="rounded-full bg-sand px-3 py-1 text-xs font-bold text-earth/80">
-                  Gestión Ambiental
-                </span>
-                <span class="rounded-full bg-sun-soft px-3 py-1 text-xs font-bold text-sun-ink">
-                  Residuos
-                </span>
-              </div>
 
               <p class="mt-5 text-sm leading-7 text-earth/70">
                 Magíster en Sostenibilidad Aplicada y Licenciada en Gestión Ambiental.
@@ -88,7 +76,7 @@
         </article>
 
         <article class="overflow-hidden rounded-lg border border-sand bg-paper shadow-sm">
-          <div class="grid gap-0 md:grid-cols-[220px_1fr]">
+          <div class="grid h-full gap-0 md:grid-cols-[220px_1fr]">
             <div class="bg-brand-soft p-6">
               <div class="mx-auto h-64 w-full max-w-[180px] overflow-hidden rounded-lg bg-paper shadow-lg">
                 <img
@@ -104,18 +92,6 @@
                 Socia fundadora
               </p>
               <h2 class="mt-2 text-2xl font-black text-ink">Lic. Evangelina Tapia</h2>
-
-              <div class="mt-4 flex flex-wrap gap-2">
-                <span class="rounded-full bg-earth-soft px-3 py-1 text-xs font-bold text-earth">
-                  ISO 14001
-                </span>
-                <span class="rounded-full bg-brand-soft px-3 py-1 text-xs font-bold text-brand-dark">
-                  Economía Circular
-                </span>
-                <span class="rounded-full bg-sand px-3 py-1 text-xs font-bold text-earth/80">
-                  Obras
-                </span>
-              </div>
 
               <p class="mt-5 text-sm leading-7 text-earth/70">
                 Licenciada en Gestión Ambiental, con amplia experiencia en supervisión
@@ -157,6 +133,42 @@
           </div>
         </article>
       </div>
+      <section
+        aria-labelledby="professional-network-title"
+        class="mt-16 border-t border-sand pt-12"
+      >
+        <h2
+          id="professional-network-title"
+          class="text-2xl font-black tracking-normal text-ink sm:text-3xl"
+        >
+          Una red de profesionales para cada proyecto
+        </h2>
+        <p class="mt-5 max-w-4xl text-lg leading-8 text-earth/70">
+          Trabajamos junto a especialistas de diversas disciplinas y conformamos el equipo según
+          las características de cada iniciativa. Integramos conocimientos y experiencia para
+          acompañar cada etapa con una mirada integral.
+        </p>
+        <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <%= for specialty <- [
+            %{icon: "hero-globe-americas", title: "Ambiental", text: "Gestores ambientales e ingenieros de distintas ramas para abordar los aspectos ambientales que requiera cada proyecto."},
+            %{icon: "hero-users", title: "Social", text: "Sociólogos y Comunicadores sociales para la gestión social de los proyectos, vinculación institucional y participación comunitaria."},
+            %{icon: "hero-building-library", title: "Patrimonial", text: "Arqueólogos y Paleontólogos para la gestión del patrimonio cultural y natural."},
+            %{icon: "hero-bug-ant", title: "Biodiversidad", text: "Especialistas en el estudio y la conservación de la flora, la fauna y los ecosistemas."},
+            %{icon: "hero-shield-check", title: "Higiene y seguridad", text: "Profesionales dedicados a la prevención de riesgos y al cuidado de las condiciones de trabajo."}
+          ] do %>
+            <article class="rounded-lg border border-sand bg-sand-light p-6">
+              <div
+                class="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-brand-soft text-brand"
+                aria-hidden="true"
+              >
+                <.icon name={specialty.icon} class="h-6 w-6" />
+              </div>
+              <h3 class="font-extrabold text-ink">{specialty.title}</h3>
+              <p class="mt-2 text-sm leading-6 text-earth/70">{specialty.text}</p>
+            </article>
+          <% end %>
+        </div>
+      </section>
     </div>
   </section>
 

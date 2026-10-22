@@ -122,6 +122,14 @@ defmodule ConsultoraWeb.Components.Layout do
               Acompañamos proyectos, obras y organizaciones con asesoramiento técnico,
               cumplimiento normativo y mirada territorial.
             </p>
+            <a
+              href="https://drive.google.com/drive/folders/1suNH3qcX_eTl89AyTC7btG8jackwGWB7?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mt-6 inline-flex items-center gap-2 rounded-lg border border-sand/40 px-5 py-3 text-sm font-bold text-sand transition hover:bg-white/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sand"
+            >
+              Repositorio académico <.icon name="hero-arrow-top-right-on-square" class="h-4 w-4" />
+            </a>
           </div>
 
           <!-- Middle content -->

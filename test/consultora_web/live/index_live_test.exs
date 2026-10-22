@@ -65,13 +65,13 @@ defmodule ConsultoraWeb.IndexLiveTest do
   test "team page expands founder biographies", %{conn: conn} do
     {:ok, view, html} = live(conn, ~p"/equipo")
 
-    refute html =~ "Ha liderado estudios ambientales"
+    refute html =~ "Ha desarrollado estudios ambientales"
 
     html =
       view
       |> element(~s(button[phx-value-member="caro"]))
       |> render_click()
 
-    assert html =~ "Ha liderado estudios ambientales"
+    assert html =~ "Ha desarrollado estudios ambientales"
   end
 end
